@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:8.4
+    image: mjayashree08/management-mysql:8.4
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: ${DB_NAME:-hackathon_db}
@@ -16,7 +16,7 @@ services:
       retries: 20
 
   api:
-    image: vaitheeshguhan/management-api:latest
+    image: mjayashree08/management-api:latest
     build:
       context: ./management
     restart: unless-stopped
@@ -32,7 +32,7 @@ services:
       - "8098:8098"
 
   frontend:
-    image: vaitheeshguhan/management-frontend:latest
+    image: mjayashree08/management-frontend:latest
     build:
       context: ./hackathon-frontend
     restart: unless-stopped

@@ -1,0 +1,8 @@
+.env
+.idea/
+target/
+**/target/
+**/node_modules/
+**/dist/
+*.local
+*.log
